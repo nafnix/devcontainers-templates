@@ -1,0 +1,66 @@
+{
+  "name": "Python3 & pyenv & PDM",
+  "build": { "dockerfile": "Dockerfile" },
+
+  // 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+  // "features": {},
+
+  // 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // 👇 Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "",
+
+  // 👇 Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "njpwerner.autodocstring",
+        "visualstudioexptteam.vscodeintellicode",
+        "donjayamanne.python-environment-manager",
+        "kevinrose.vsc-python-indent",
+        "tamasfe.even-better-toml",
+        "streetsidesoftware.code-spell-checker",
+        "redhat.vscode-yaml",
+        "donjayamanne.githistory",
+        "felipecaputo.git-project-manager",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "foxundermoon.shell-format",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.exclude": {
+          "**/__pycache__": true
+        },
+        "python.languageServer": "Pylance",
+        "python.linting.mypyEnabled": true,
+        "python.testing.pytestEnabled": true,
+        "python.analysis.inlayHints.functionReturnTypes": true,
+        "python.analysis.inlayHints.variableTypes": true,
+        "autoDocstring.docstringFormat": "sphinx-notypes",
+        "shellformat.useEditorConfig": true,
+        "[dockercompose]": {
+          "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        },
+        "[dockerfile]": {
+          "editor.defaultFormatter": "foxundermoon.shell-format"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[yaml]": {
+          "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "python.linting.mypyCategorySeverity.error": "Error"
+      }
+    }
+  }
+
+  // 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}

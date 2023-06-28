@@ -7,17 +7,17 @@
   "customizations": {
     "vscode": {
       "extensions": [
-		"mads-hartmann.bash-ide-vscode",
-		"streetsidesoftware.code-spell-checker",
-		"editorconfig.editorconfig",
-		"foxundermoon.shell-format",
-		"davidanson.vscode-markdownlint",
-		"esbenp.prettier-vscode",
-		"pkief.material-icon-theme",
-		"zhuangtongfa.material-theme",
-		"redhat.vscode-yaml",
-		"github.vscode-github-actions"
-	],
+        "mads-hartmann.bash-ide-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "foxundermoon.shell-format",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "pkief.material-icon-theme",
+        "zhuangtongfa.material-theme",
+        "redhat.vscode-yaml",
+        "github.vscode-github-actions"
+      ],
       "settings": {
         "window.zoomLevel": 1,
         "files.autoSave": "onFocusChange",
@@ -40,6 +40,9 @@
         },
         "[yaml]": {
           "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
         },
         "workbench.iconTheme": "material-icon-theme",
         "workbench.colorTheme": "One Dark Pro"
