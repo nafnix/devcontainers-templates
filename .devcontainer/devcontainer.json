@@ -2,6 +2,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
   "features": {
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "customizations": {
@@ -10,27 +11,16 @@
         "mads-hartmann.bash-ide-vscode",
         "streetsidesoftware.code-spell-checker",
         "editorconfig.editorconfig",
-        "foxundermoon.shell-format",
-        "davidanson.vscode-markdownlint",
+
         "esbenp.prettier-vscode",
-        "pkief.material-icon-theme",
-        "zhuangtongfa.material-theme",
         "redhat.vscode-yaml",
+        "davidanson.vscode-markdownlint",
+
         "github.vscode-github-actions"
       ],
       "settings": {
-        "window.zoomLevel": 1,
-        "files.autoSave": "onFocusChange",
-        "editor.fontSize": 16,
-        "editor.fontFamily": "'Mononoki Nerd Font Mono', 霞鹜文楷等宽, Consolas, 'Courier New', monospace",
-        "editor.mouseWheelZoom": true,
-        "editor.formatOnSave": true,
-        "shellformat.useEditorConfig": true,
         "[dockercompose]": {
           "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-        },
-        "[dockerfile]": {
-          "editor.defaultFormatter": "foxundermoon.shell-format"
         },
         "[jsonc]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -43,9 +33,7 @@
         },
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-        },
-        "workbench.iconTheme": "material-icon-theme",
-        "workbench.colorTheme": "One Dark Pro"
+        }
       }
     }
   },
