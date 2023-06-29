@@ -14,7 +14,7 @@ ENV PYENV_ROOT=${HOME}/.pyenv
 ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${HOME}/.local/bin:$PATH"
 
 RUN curl https://pyenv.run | bash \
-    && pyenv install ${PYTHON_VERSION} \
+    && pyenv install ${PYTHON_VERSION} -v \
     && pyenv global ${PYTHON_VERSION} \
     && echo 'export PYENV_ROOT="$HOME/.pyenv"' >>${HOME}/.zshrc \
     && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >>${HOME}/.zshrc \
