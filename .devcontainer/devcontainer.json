@@ -37,5 +37,5 @@
       }
     }
   },
-  "postCreateCommand": "npm install -g @devcontainers/cli"
+  "postCreateCommand": "npm install -g @devcontainers/cli && pre-commit install && pre-commit install-hooks"
 }
