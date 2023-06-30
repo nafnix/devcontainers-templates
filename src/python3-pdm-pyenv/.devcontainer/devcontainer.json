@@ -14,43 +14,7 @@
   // 👇 Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance"
-
-        // "donjayamanne.python-environment-manager",
-        // "kevinrose.vsc-python-indent",
-        // "streetsidesoftware.code-spell-checker",
-        // "njpwerner.autodocstring",
-
-        // "tamasfe.even-better-toml",
-
-        // "esbenp.prettier-vscode"
-        // "editorconfig.editorconfig",
-
-        // "donjayamanne.githistory",
-        // "felipecaputo.git-project-manager",
-        // "eamodio.gitlens",
-      ],
-      "settings": {
-        "files.exclude": { "**/__pycache__": true },
-        "python.languageServer": "Pylance",
-        "python.analysis.inlayHints.functionReturnTypes": true,
-        "python.analysis.inlayHints.variableTypes": true,
-        "autoDocstring.docstringFormat": "sphinx-notypes",
-        "[dockercompose]": {
-          "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-        },
-        "[jsonc]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[json]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[yaml]": {
-          "editor.defaultFormatter": "redhat.vscode-yaml"
-        }
-      }
+      "extensions": ["ms-python.python", "ms-python.vscode-pylance"]
     }
   }
 
