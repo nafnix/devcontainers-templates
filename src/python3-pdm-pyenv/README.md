@@ -1,13 +1,13 @@
 
 # python3 & pyenv & pdm (python3-pdm-pyenv)
 
-一个基于 debian 的 devcontainer，默认带有通过 pyenv 获取的 python 和 pdm，此外，初始的 python 安装了 pylance。
+一个基于 debian 的 devcontainer，默认带有通过 pyenv 获取的 python 和 pdm。
 
 ## Options
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| imageVariant | Debian version: | string | ubuntu-22.04 |
+| imageVariant | System: | string | ubuntu-22.04 |
 | pythonVersion | Python version: | string | 3.11 |
 
 
