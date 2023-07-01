@@ -2,13 +2,13 @@
   "id": "python3-pdm-pyenv",
   "version": "0.0.2",
   "name": "python3 & pyenv & pdm",
-  "description": "一个基于 debian 的 devcontainer，默认带有通过 pyenv 获取的 python 和 pdm，此外，初始的 python 安装了 pylance。",
+  "description": "一个基于 debian 的 devcontainer，默认带有通过 pyenv 获取的 python 和 pdm。",
   "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python3-pdm-pyenv",
   "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
   "options": {
     "imageVariant": {
       "type": "string",
-      "description": "Debian version:",
+      "description": "System:",
       "proposals": [
         "ubuntu",
         "ubuntu-22.04",
@@ -18,9 +18,7 @@
         "debian",
         "bookworm",
         "debian-11",
-        "bullseye",
-        "debian-10",
-        "buster"
+        "bullseye"
       ],
       "default": "ubuntu-22.04"
     },

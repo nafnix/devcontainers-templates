@@ -1,28 +1,31 @@
 FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}
 
-ARG DEBIAN_FRONTEND=noninteractive USER=vscode
+ARG DEBIAN_FRONTEND=noninteractive
+ARG USER=vscode
 
 RUN DEBIAN_FRONTEND=${DEBIAN_FRONTEND} \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends curl wget ca-certificates git unar zsh gcc make zlib1g zlib1g-dev libffi-dev libssl-dev libbz2-dev libsqlite3-dev lzma \
-    && usermod -s /bin/zsh vscode
+    && apt update \
+    && apt install -y --no-install-recommends curl wget git zsh sudo build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
+    && apt autoremove -y \
+    && rm -rf /var/lib/apt/lists/* \
+    && usermod -s /bin/zsh ${USER}
 
 USER ${USER}
 ARG HOME="/home/${USER}"
+WORKDIR ${HOME}
+
 ARG PYTHON_VERSION=${templateOption:pythonVersion}
 ENV PYENV_ROOT=${HOME}/.pyenv
-ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${HOME}/.local/bin:$PATH"
+ARG PYENV_PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/shims"
+ARG PDM_PATH="${HOME}/.local/bin"
+ENV PATH="${PYENV_PATH}:${PDM_PATH}:$PATH"
+RUN set -x \
+    && curl http://pyenv.run | bash \
+    && echo 'eval "$(pyenv init -)"' >>${HOME}/.zshrc \
+    && pyenv install -v ${PYTHON_VERSION} \
+    && pyenv global ${PYTHON_VERSION}
 
-RUN curl https://pyenv.run | bash \
-    && pyenv install ${PYTHON_VERSION} -v \
-    && pyenv global ${PYTHON_VERSION} \
-    && echo 'export PYENV_ROOT="$HOME/.pyenv"' >>${HOME}/.zshrc \
-    && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >>${HOME}/.zshrc \
-    && echo 'eval "$(pyenv init -)"' >>${HOME}/.zshrc
-
-RUN curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py | python3 - \
-    && mkdir ${HOME}/.zfunc \
-    && pdm completion zsh >${HOME}/.zfunc/_pdm \
-    && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
-    && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc \
-    && pdm self add pylance
+RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
+    && curl -sSL https://pdm.fming.dev/dev/install-pdm.py.sha256 | shasum -a 256 -c - \
+    && python install-pdm.py \
+    && rm install-pdm.py
