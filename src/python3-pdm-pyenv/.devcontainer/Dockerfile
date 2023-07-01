@@ -28,4 +28,9 @@ RUN set -x \
 RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
     && curl -sSL https://pdm.fming.dev/dev/install-pdm.py.sha256 | shasum -a 256 -c - \
     && python install-pdm.py \
-    && rm install-pdm.py
+    && rm install-pdm.py \
+    && mkdir ${HOME}/.zfunc \
+    && pdm completion zsh >${HOME}/.zfunc/_pdm \
+    && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
+    && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc \
+    && echo "PATH=${PATH}" >> ${HOME}/.zshrc
