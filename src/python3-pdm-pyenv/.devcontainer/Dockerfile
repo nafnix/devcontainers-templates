@@ -32,5 +32,4 @@ RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
     && mkdir ${HOME}/.zfunc \
     && pdm completion zsh >${HOME}/.zfunc/_pdm \
     && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
-    && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc \
-    && echo "PATH=${PATH}" >> ${HOME}/.zshrc
+    && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc
