@@ -1,0 +1,19 @@
+root = true
+
+[*]
+indent_size = 4
+indent_style = space
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.json]
+indent_size = 2
+
+[*.yaml]
+indent_size = 2
+
+[{Dockerfile, *.sh}]
+binary_next_line = true
+func_next_line = true
