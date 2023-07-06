@@ -33,3 +33,6 @@ RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
     && pdm completion zsh >${HOME}/.zfunc/_pdm \
     && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
     && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc
+
+# RUN sudo curl -sSL https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_amd64 -o /usr/local/bin/shfmt \
+#     && sudo chmod 777 /usr/local/bin/shfmt

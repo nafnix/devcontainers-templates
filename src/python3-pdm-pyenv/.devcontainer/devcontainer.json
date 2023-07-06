@@ -4,7 +4,8 @@
     "dockerfile": "Dockerfile"
   },
   // 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
-  // "features": {},
+  // "features": { "ghcr.io/devcontainers/features/docker-in-docker:2": {} },
+
   // 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // 👇 Use 'postCreateCommand' to run commands after the container is created.
@@ -13,9 +14,47 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        // python
         "ms-python.python",
         "donjayamanne.python-environment-manager"
+        // "kevinrose.vsc-python-indent",
+        // "visualstudioexptteam.vscodeintellicode",
+        // "njpwerner.autodocstring",
+
+        // // python lint
+        // "ms-python.black-formatter",
+        // "charliermarsh.ruff",
+
+        // // shell
+        // "foxundermoon.shell-format",
+        // "timonwong.shellcheck",
+
+        // // env
+        // "mikestead.dotenv",
+
+        // // git
+        // "donjayamanne.githistory",
+        // "eamodio.gitlens",
+        // "mhutchie.git-graph",
+        // "GitHub.vscode-pull-request-github",
+        // "codezombiech.gitignore",
+
+        // // other
+        // "ultram4rine.vscode-choosealicense",
+        // "streetsidesoftware.code-spell-checker",
+        // "tamasfe.even-better-toml",
+        // "esbenp.prettier-vscode",
+        // "editorconfig.editorconfig",
+        // "redhat.vscode-yaml",
+        // "davidanson.vscode-markdownlint",
+        // "oderwat.indent-rainbow",
+        // "christian-kohler.path-intellisense"
       ]
+      // "settings": {
+      //   "shellformat.path": "/usr/local/bin/shfmt",
+      //   "shellformat.useEditorConfig": true,
+      //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+      // }
     }
   }
   // 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
