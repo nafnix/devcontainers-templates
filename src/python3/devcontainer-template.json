@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "name": "Basic Python3",
   "description": "A basic Python development container.",
-  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python",
+  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python3",
   "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
   "options": {
     "imageVariant": {
