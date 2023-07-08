@@ -1,7 +1,7 @@
 {
   "id": "Python3",
   "version": "0.0.1",
-  "name": "Python3",
+  "name": "Basic Python3",
   "description": "A basic Python development container.",
   "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python",
   "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
