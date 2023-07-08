@@ -11,3 +11,4 @@ repos:
     rev: "v3.0.0-alpha.9-for-vscode" # Use the sha / tag you want to point at
     hooks:
       - id: prettier
+        types_or: [json, yaml]
