@@ -1,0 +1,42 @@
+{
+  "id": "Python3",
+  "version": "0.0.1",
+  "name": "Python3",
+  "description": "A basic Python development container.",
+  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python",
+  "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "Python version and OS image tag. Optional value reference: https://hub.docker.com/_/python.",
+      "proposals": [
+        "3.11-bookworm",
+        "3.11-slim-bookworm",
+        "3.11-bullseye",
+        "3.11-slim-bullseye",
+
+        "3.10-bookworm",
+        "3.10-slim-bookworm",
+        "3.10-bullseye",
+        "3.10-slim-bullseye",
+
+        "3.9-bookworm",
+        "3.9-slim-bookworm",
+        "3.9-bullseye",
+        "3.9-slim-bullseye",
+
+        "3.8-bookworm",
+        "3.8-slim-bookworm",
+        "3.8-bullseye",
+        "3.8-slim-bullseye",
+
+        "3.7-bookworm",
+        "3.7-slim-bookworm",
+        "3.7-bullseye",
+        "3.7-slim-bullseye"
+      ],
+      "default": "3.11-bookworm"
+    }
+  },
+  "platforms": ["python"]
+}
