@@ -1,8 +1,7 @@
 // More info: https://containers.dev/implementors/json_reference/
 {
-  "build": { "dockerfile": "Dockerfile" },
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
@@ -15,20 +14,15 @@
 
         "esbenp.prettier-vscode",
         "redhat.vscode-yaml",
-        "davidanson.vscode-markdownlint",
-
-        "github.vscode-github-actions",
-        "foxundermoon.shell-format"
+        "davidanson.vscode-markdownlint"
       ],
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-        },
-        "shellformat.useEditorConfig": true,
-        "shellformat.path": "/usr/local/bin/shfmt"
+        }
       }
     }
   },
-  "postCreateCommand": "npm install -g @devcontainers/cli && pre-commit install && pre-commit install-hooks"
+  "postCreateCommand": "npm install -g @devcontainers/cli"
 }
