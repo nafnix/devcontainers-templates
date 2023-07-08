@@ -2,13 +2,11 @@ FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG USER=vscode
-
-RUN DEBIAN_FRONTEND=${DEBIAN_FRONTEND} \
-    && apt update \
+RUN apt update \
     && apt install -y --no-install-recommends curl wget git zsh sudo build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
-    && usermod -s /bin/zsh ${USER}
+    && usermod -s /usr/bin/zsh ${USER}
 
 USER ${USER}
 ARG HOME="/home/${USER}"
@@ -33,6 +31,3 @@ RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
     && pdm completion zsh >${HOME}/.zfunc/_pdm \
     && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
     && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc
-
-# RUN sudo curl -sSL https://github.com/mvdan/sh/releases/download/v3.7.0/shfmt_v3.7.0_linux_amd64 -o /usr/local/bin/shfmt \
-#     && sudo chmod 777 /usr/local/bin/shfmt

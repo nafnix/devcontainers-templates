@@ -1,6 +1,6 @@
 {
   "id": "python3-pdm-pyenv",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "name": "python3 & pyenv & pdm",
   "description": "一个基于 debian 的 devcontainer，默认带有通过 pyenv 获取的 python 和 pdm。",
   "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python3-pdm-pyenv",
