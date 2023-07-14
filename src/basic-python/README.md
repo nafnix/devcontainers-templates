@@ -1,7 +1,7 @@
 
-# Basic Python3 (python3)
+# Basic Python (basic-python)
 
-A basic python development container.
+A basic Python development container.
 
 ## Options
 
@@ -13,4 +13,4 @@ A basic python development container.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/nafnix/devcontainers-templates/blob/main/src/python3/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/nafnix/devcontainers-templates/blob/main/src/basic-python/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
