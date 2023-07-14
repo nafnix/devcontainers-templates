@@ -1,0 +1,37 @@
+{
+  "id": "basic-nodejs",
+  "version": "0.0.1",
+  "name": "Basic Node.js",
+  "description": "A basic Node.js development container.",
+  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/basic-nodejs",
+  "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "Node.js version and Debian release tag. Optional value reference: https://hub.docker.com/_/node.",
+      "proposals": [
+        "lts-bookworm",
+        "lts-bookworm-slim",
+        "lts-bullseye",
+        "lts-bullseye-slim",
+
+        "20-bookworm",
+        "20-bookworm-slim",
+        "20-bullseye",
+        "20-bullseye-slim",
+
+        "18-bookworm",
+        "18-bookworm-slim",
+        "18-bullseye",
+        "18-bullseye-slim",
+
+        "16-bookworm",
+        "16-bookworm-slim",
+        "16-bullseye",
+        "16-bullseye-slim"
+      ],
+      "default": "lts-bookworm"
+    }
+  },
+  "platforms": ["Node.js", "JavaScript"]
+}
