@@ -13,7 +13,7 @@ jobs:
         with:
           filters: |
             python3-pdm-pyenv: ./**/python3-pdm-pyenv/**
-            python3: ./**/python3/**
+            basic-python: ./**/basic-python/**
             basic-nodejs: ./**/basic-nodejs/**
 
   test:

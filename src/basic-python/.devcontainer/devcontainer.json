@@ -1,5 +1,5 @@
 {
-  "name": "Basic Python3",
+  "name": "Basic Python",
   "build": { "dockerfile": "Dockerfile" },
   "remoteUser": "vscode",
   "customizations": {
