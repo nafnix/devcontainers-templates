@@ -13,6 +13,10 @@
 
   - 一个基于 python 官方镜像的 devcontainer，默认带有 vscode 用户，并为其配置了免密码的 sudo 权限。
 
+- basic-nodejs:
+
+  - 一个基于 node 官方镜像的 devcontainer，默认带有 node 用户，并为其配置了免密码的 sudo 权限。
+
 ## 协作
 
 任何人都可以对这个存储库进行改进。
