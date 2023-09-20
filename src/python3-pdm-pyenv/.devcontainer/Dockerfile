@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}
 ARG DEBIAN_FRONTEND=noninteractive
 ARG USER=vscode
 RUN apt update \
-    && apt install -y --no-install-recommends curl wget git zsh sudo build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
+    && apt install -y --no-install-recommends curl wget git sudo build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
     && usermod -s /usr/bin/zsh ${USER}
@@ -23,11 +23,8 @@ RUN set -x \
     && pyenv install -v ${PYTHON_VERSION} \
     && pyenv global ${PYTHON_VERSION}
 
-RUN curl -sSLO https://pdm.fming.dev/dev/install-pdm.py \
-    && curl -sSL https://pdm.fming.dev/dev/install-pdm.py.sha256 | shasum -a 256 -c - \
-    && python install-pdm.py \
-    && rm install-pdm.py \
-    && mkdir ${HOME}/.zfunc \
-    && pdm completion zsh >${HOME}/.zfunc/_pdm \
-    && echo 'fpath+=${HOME}/.zfunc' >>${HOME}/.zshrc \
-    && echo 'autoload -Uz compinit && compinit' >>${HOME}/.zshrc
+ARG ZSH_CUSTOM=${HOME}/.oh-my-zsh/custom
+RUN curl -sSL https://pdm.fming.dev/install-pdm.py | python - \
+    && mkdir ${ZSH_CUSTOM}/plugins/pdm \
+    && pdm completion zsh > ${ZSH_CUSTOM}/plugins/pdm/_pdm \
+    && sed -i "s|^plugins=(|&pdm |" ${HOME}/.zshrc
