@@ -1,6 +1,6 @@
 {
   "id": "basic-python",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "Basic Python",
   "description": "A basic Python development container.",
   "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/python3",
@@ -10,6 +10,11 @@
       "type": "string",
       "description": "Python version and OS image tag. Optional value reference: https://hub.docker.com/_/python.",
       "proposals": [
+        "3.12-bookworm",
+        "3.12-slim-bookworm",
+        "3.12-bullseye",
+        "3.12-slim-bullseye",
+
         "3.11-bookworm",
         "3.11-slim-bookworm",
         "3.11-bullseye",
