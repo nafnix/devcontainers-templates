@@ -1,0 +1,36 @@
+{
+  "id": "pure",
+  "version": "0.0.1",
+  "name": "pure",
+  "description": "A pure development container.",
+  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/pure",
+  "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "A Docker image for a Debian-based system",
+      "proposals": [
+        "debian",
+        "debian:latest",
+        "debian:12",
+        "debian:11",
+        "debian:12-slim",
+        "debian:11-slim",
+        "debian:bookworm",
+        "debian:bullseye",
+        "debian:bookworm-slim",
+        "debian:bullseye-slim",
+
+        "ubuntu",
+        "ubuntu:latest",
+        "ubuntu:plucky",
+        "ubuntu:oracular",
+        "ubuntu:noble",
+        "ubuntu:jammy",
+        "ubuntu:focal"
+      ],
+      "default": "debian"
+    }
+  },
+  "platforms": ["linux"]
+}

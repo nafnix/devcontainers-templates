@@ -1,0 +1,10 @@
+{
+  "name": "pure",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "developer",
+  "customizations": {
+    "vscode": {
+      "extensions": ["streetsidesoftware.code-spell-checker"]
+    }
+  }
+}
