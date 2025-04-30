@@ -1,0 +1,14 @@
+{
+  "name": "uv",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "developer",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
