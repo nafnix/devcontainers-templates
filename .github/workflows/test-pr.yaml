@@ -15,6 +15,10 @@ jobs:
             python3-pdm-pyenv: ./**/python3-pdm-pyenv/**
             basic-python: ./**/basic-python/**
             basic-nodejs: ./**/basic-nodejs/**
+            gleam: ./**/gleam/**
+            hugo-pnpm: ./**/hugo-pnpm/**
+            pure: ./**/pure/**
+            uv: ./**/uv/**
 
   test:
     needs: [detect-changes]
