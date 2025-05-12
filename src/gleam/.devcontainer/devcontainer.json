@@ -1,0 +1,14 @@
+{
+  "name": "gleam",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "developer",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Gleam.gleam",
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

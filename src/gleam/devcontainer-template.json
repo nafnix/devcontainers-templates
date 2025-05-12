@@ -1,0 +1,42 @@
+{
+  "id": "gleam",
+  "version": "0.0.1",
+  "name": "gleam",
+  "description": "A development container with gleam.",
+  "documentationURL": "https://github.com/nafnix/devcontainers-templates/tree/main/src/gleam",
+  "licenseURL": "https://github.com/nafnix/devcontainers-templates/blob/main/LICENSE",
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "A Docker image for a Debian-based system",
+      "proposals": [
+        "debian",
+        "debian:latest",
+        "debian:12",
+        "debian:11",
+        "debian:12-slim",
+        "debian:11-slim",
+        "debian:bookworm",
+        "debian:bullseye",
+        "debian:bookworm-slim",
+        "debian:bullseye-slim",
+
+        "ubuntu",
+        "ubuntu:latest",
+        "ubuntu:plucky",
+        "ubuntu:oracular",
+        "ubuntu:noble",
+        "ubuntu:jammy",
+        "ubuntu:focal"
+      ],
+      "default": "debian"
+    },
+    "gleamVersion": {
+      "type": "string",
+      "description": "The version of gleam to install",
+      "proposals": ["v1.10.0", "v1.9.1", "v1.9.0"],
+      "default": "v1.10.0"
+    }
+  },
+  "platforms": ["gleam", "linux"]
+}
